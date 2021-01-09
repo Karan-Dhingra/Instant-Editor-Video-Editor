@@ -6,8 +6,8 @@ from moviepy.editor import *
 
 # Variable
 
-clip1 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\1.MKV')
-clip2 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\2.MKV')
+clip1 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\1.MP4')
+clip2 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\2.MP4')
 clip3 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\3.MP4')
 
 # Main Screen
@@ -24,7 +24,7 @@ root.iconbitmap('D:\\Languages\\Python\\Video Editor\\icon.ico')
 
 
 def mix():
-    final_clip = concatenate_videoclips([clip1, clip2, clip3])
+    final_clip = concatenate_videoclips([clip1, clip2])
     final_clip.write_videofile("Final render.mp4")
 
 
@@ -35,7 +35,7 @@ def mirror():
 
 def resize():
     r = float(input("Enter your Size: "))
-    clip_resize = clip1.resize(height = r)
+    clip_resize = clip1.resize(height=r)
     clip_resize.write_videofile("Final render2.mp4")
 
 
@@ -55,14 +55,14 @@ def trim():
     start = float(input("Enter your Starting point: "))
     end = float(input("Enter your Ending point: "))
     clip_trim = clip1.cutout(start, end)
-    clip_trim.write_videofile("Final render5.mp4")
+    clip_trim.write_videofile("Final render5.mp4", codec = 'libx264')
 
 
 def audio_file():
     # import moviepy.editor as mpe
-    audioClip = AudioFileClip("audio.m4a")
+    audioClip = AudioFileClip('D:\\Languages\\Python\\Video Editor\\audio_9.mpeg')
     # VideoClip = mpe.VideoClip.set_audio(audioClip)
-    final_clip = VideoClip.set_audio(audioClip)
+    final_clip = clip1.set_audio(audioClip)
     final_clip.write_videofile("Final render6.mp4")
 
 
@@ -72,7 +72,7 @@ b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Mirror
-b = Button(root, text="Crop", relief=GROOVE, background="#232323", foreground="white", command=mirror)
+b = Button(root, text="Mirror", relief=GROOVE, background="#232323", foreground="white", command=mirror)
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
