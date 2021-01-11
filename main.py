@@ -1,11 +1,12 @@
 from tkinter import *
 from moviepy.editor import *
 
-# Variable
 
+# Variable
 clip1 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\1.MP4')
 clip2 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\2.MP4')
 clip3 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\3.MP4')
+
 
 # Main Screen
 root = Tk()
@@ -18,8 +19,6 @@ root.iconbitmap('D:\\Languages\\Python\\Video Editor\\icon.ico')
 
 
 # Functions
-
-
 def mix():
     final_clip = concatenate_videoclips([clip1, clip2])
     final_clip.write_videofile("Final render.mp4")
@@ -56,9 +55,7 @@ def trim():
 
 
 def audio_file():
-    # import moviepy.editor as mpe
     audioClip = AudioFileClip('D:\\Languages\\Python\\Video Editor\\audio_9.mpeg')
-    # VideoClip = mpe.VideoClip.set_audio(audioClip)
     final_clip = clip1.set_audio(audioClip)
     final_clip.write_videofile("Final render6.mp4")
 
@@ -97,6 +94,7 @@ b.config(width=8, height=3)
 b = Button(root, text="Audio", relief=GROOVE, background="#232323", foreground="white", command=audio_file, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
+
 
 # root.mainLoop()
 root.mainloop()
