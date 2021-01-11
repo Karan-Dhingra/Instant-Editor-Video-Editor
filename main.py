@@ -64,37 +64,37 @@ def audio_file():
 
 
 # Mix
-b = Button(root, text="Mix", relief=GROOVE, background="#232323", foreground="white", command=mix)
+b = Button(root, text="Mix", relief=GROOVE, background="#232323", foreground="white", command=mix, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Mirror
-b = Button(root, text="Mirror", relief=GROOVE, background="#232323", foreground="white", command=mirror)
+b = Button(root, text="Mirror", relief=GROOVE, background="#232323", foreground="white", command=mirror, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Resize
-b = Button(root, text="Resize", relief=GROOVE, background="#232323", foreground="white", command=resize)
+b = Button(root, text="Resize", relief=GROOVE, background="#232323", foreground="white", command=resize, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Speed
-b = Button(root, text="Speed", relief=GROOVE, background="#232323", foreground="white", command=Effects_speed)
+b = Button(root, text="Speed", relief=GROOVE, background="#232323", foreground="white", command=Effects_speed, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Colour
-b = Button(root, text="Colour", relief=GROOVE, background="#232323", foreground="white", command=Effects_colour)
+b = Button(root, text="Colour", relief=GROOVE, background="#232323", foreground="white", command=Effects_colour, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Trim
-b = Button(root, text="Trim", relief=GROOVE, background="#232323", foreground="white", command=trim)
+b = Button(root, text="Trim", relief=GROOVE, background="#232323", foreground="white", command=trim, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
 # Audio
-b = Button(root, text="Audio", relief=GROOVE, background="#232323", foreground="white", command=audio_file)
+b = Button(root, text="Audio", relief=GROOVE, background="#232323", foreground="white", command=audio_file, cursor="hand1")
 b.pack(side="left", padx=20)
 b.config(width=8, height=3)
 
