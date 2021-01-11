@@ -1,9 +1,6 @@
 from tkinter import *
 from moviepy.editor import *
 
-# from tkinter import filedialog
-
-
 # Variable
 
 clip1 = VideoFileClip('D:\\Languages\\Python\\Video Editor\\1.MP4')
